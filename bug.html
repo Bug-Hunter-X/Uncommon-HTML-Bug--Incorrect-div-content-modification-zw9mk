@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrect attempt to change the content of the div
+    document.getElementById("myDiv").innerHTML = "<p>This text will not show.</p>";
+    document.getElementById("myDiv").outerHTML = "<p>This text will not show either</p>"; 
+    //The problem is that it may not be rendered as the browser automatically corrects the code 
+    //Therefore this solution is needed to resolve the issue
+  </script>
+</body>
+</html>
